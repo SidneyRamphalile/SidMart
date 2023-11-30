@@ -25,7 +25,7 @@ const BlogCard = () => {
           </p>
 
           {/* Read More button linking to the home page */}
-          <Link to="/" className="button">
+          <Link to="/blog/:id" className="button">
             Read More
           </Link>
         </div>
