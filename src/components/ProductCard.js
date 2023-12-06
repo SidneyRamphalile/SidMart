@@ -14,7 +14,7 @@ const ProductCard = (props) => {
     <>
       {/* Dynamically set the column size based on the route */}
       <div
-        className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}
+        className={`${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}
       >
         {/* Link to the product details page */}
         <Link to=":id" className="product-card position-relative">
