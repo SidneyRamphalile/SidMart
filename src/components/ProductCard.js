@@ -19,7 +19,16 @@ const ProductCard = (props) => {
         }`}
       >
         {/* Link to the product details page */}
-        <Link to=":id" className="product-card position-relative">
+        <Link
+          to={`${
+            location.pathname == "/" 
+            ? "product/:id" 
+            : location.pathname == "/product/:id"
+            ? "/product/:id"
+            : ":id"
+          }`}
+          className="product-card position-relative"
+        >
           {/* Wishlist icon with a link (currently inactive) */}
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
@@ -91,7 +100,16 @@ const ProductCard = (props) => {
         }`}
       >
         {/* Link to the product details page */}
-        <Link to=":id" className="product-card position-relative">
+        <Link
+          to={`${
+            location.pathname == "/" 
+            ? "product/:id" 
+            : location.pathname == "/product/:id"
+            ? "/product/:id"
+            : ":id"
+          }`}
+          className="product-card position-relative"
+        >
           {/* Wishlist icon with a link (currently inactive) */}
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
