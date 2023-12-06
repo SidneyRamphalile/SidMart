@@ -14,7 +14,81 @@ const ProductCard = (props) => {
     <>
       {/* Dynamically set the column size based on the route */}
       <div
-        className={`${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname === "/product" ? `gr-${grid}` : "col-3"
+        }`}
+      >
+        {/* Link to the product details page */}
+        <Link to=":id" className="product-card position-relative">
+          {/* Wishlist icon with a link (currently inactive) */}
+          <div className="wishlist-icon position-absolute">
+            <button className="border-0 bg-transparent">
+              <img src="/images/wish.svg" alt="wishlist" />
+            </button>
+          </div>
+
+          {/* Product images with alternative formats */}
+          <div className="product-image">
+            <img
+              src="/images/watch.jpg"
+              className="img-fluid"
+              alt="product image"
+            />
+            <img
+              src="/images/watch-1.avif"
+              className="img-fluid"
+              alt="product image"
+            />
+          </div>
+
+          {/* Product details */}
+          <div className="product-details">
+            <h6 className="brand">Havels</h6>
+            <h5 className="product-title">
+              Kids headphones bulk 10 pack multi colored for students
+            </h5>
+
+            {/* Star rating component from 'react-rating-stars-component' */}
+            <ReactStars
+              count={5}
+              size={24}
+              value={4}
+              edit={false}
+              activeColor="#ffd700"
+            />
+
+            {/* Description with conditional class based on grid size */}
+            <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum delemiti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt...
+            </p>
+
+            {/* Product price */}
+            <p className="price">$100.00</p>
+          </div>
+
+          {/* Action bar with links for product actions */}
+          <div className="action-bar position-absolute">
+            <div className="d-flex flex-column gap-15">
+              <button className="border-0 bg-transparent">
+                <img src="/images/prodcompare.svg" alt="compare" />
+              </button>
+              <button className="border-0 bg-transparent">
+                <img src="/images/view.svg" alt="view" />
+              </button>
+              <button className="border-0 bg-transparent">
+                <img src="/images/add-cart.svg" alt="add cart" />
+              </button>
+            </div>
+          </div>
+        </Link>
+      </div>
+      <div
+        className={`${
+          location.pathname === "/product" ? `gr-${grid}` : "col-3"
+        }`}
       >
         {/* Link to the product details page */}
         <Link to=":id" className="product-card position-relative">
