@@ -4,6 +4,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import Meta from "../components/Meta";
 import { Link } from "react-router-dom";
+import Container from "../components/Container";
 
 // SingleBlog component representing a page for displaying a single blog
 const SingleBlog = () => {
@@ -16,8 +17,7 @@ const SingleBlog = () => {
       <BreadCrumb title={"Dynamic Blog Name"} />
 
       {/* Main container for the single blog page */}
-      <div className="blog-wrapper home-wrapper-2 py-5">
-        <div className="container-xxl">
+      <Container class1="blog-wrapper home-wrapper-2 py-5">
           <div className="row">
             <div className="col-12">
               {/* Container for the single blog content */}
@@ -55,8 +55,7 @@ const SingleBlog = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   );
 };

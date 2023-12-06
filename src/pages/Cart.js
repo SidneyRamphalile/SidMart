@@ -3,6 +3,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Container from "../components/Container";
 
 // Cart component to display the items in the shopping cart
 const Cart = () => {
@@ -15,8 +16,7 @@ const Cart = () => {
       <BreadCrumb title={"Cart"} />
 
       {/* Cart section with product details */}
-      <section className="cart-wrapper home-wrapper-2 py-5">
-        <div className="container-xxl">
+      <Container class1="cart-wrapper home-wrapper-2 py-5">
           <div className="row">
             <div className="col-12">
               {/* Cart header with column titles */}
@@ -99,8 +99,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   );
 };

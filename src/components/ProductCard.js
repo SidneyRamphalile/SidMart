@@ -20,9 +20,9 @@ const ProductCard = (props) => {
         <Link to=":id" className="product-card position-relative">
           {/* Wishlist icon with a link (currently inactive) */}
           <div className="wishlist-icon position-absolute">
-            <Link>
+            <button className="border-0 bg-transparent">
               <img src="/images/wish.svg" alt="wishlist" />
-            </Link>
+            </button>
           </div>
 
           {/* Product images with alternative formats */}
@@ -70,15 +70,15 @@ const ProductCard = (props) => {
           {/* Action bar with links for product actions */}
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">
-              <Link>
+              <button className="border-0 bg-transparent">
                 <img src="/images/prodcompare.svg" alt="compare" />
-              </Link>
-              <Link>
+              </button>
+              <button className="border-0 bg-transparent">
                 <img src="/images/view.svg" alt="view" />
-              </Link>
-              <Link>
+              </button>
+              <button className="border-0 bg-transparent">
                 <img src="/images/add-cart.svg" alt="add cart" />
-              </Link>
+              </button>
             </div>
           </div>
         </Link>

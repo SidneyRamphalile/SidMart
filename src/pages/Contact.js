@@ -4,6 +4,7 @@ import BreadCrumb from "../components/BreadCrumb"; // Import BreadCrumb componen
 import Meta from "../components/Meta"; // Import Meta component for setting page metadata
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai"; // Import icons from react-icons library
 import { BiInfoCircle, BiPhoneCall } from "react-icons/bi";
+import Container from "../components/Container";
 
 // Functional component for the Contact page
 const Contact = () => {
@@ -15,8 +16,7 @@ const Contact = () => {
       <BreadCrumb title={"Contact Us"} />
 
       {/* Main content wrapper */}
-      <div className="contact-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+      <Container class1="contact-wrapper py-5 home-wrapper-2">
           <div className="row">
             <div className="col-12">
               {/* Google Maps embed iframe for displaying the location */}
@@ -112,8 +112,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   );
 };
